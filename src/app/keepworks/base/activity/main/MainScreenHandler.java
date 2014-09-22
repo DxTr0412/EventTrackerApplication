@@ -72,12 +72,19 @@ public class MainScreenHandler implements OnClickListener {
 	}
 
 	public void loadEventsFromAssets() {
-		String eventsData = Util.getJsonStringFromAssets(activity,
-				"event_details.json");
-		EventListObject elo = (new ReflectionParser<EventListObject>())
-				.getResponseObject(EventListObject.class, eventsData);
-		EventObject.getEventDBUtil(activity).callBatchInsertUpdates(
-				elo.eventsList);
+		new AsyncTask<Void, Void, Void>() {
+
+			@Override
+			protected Void doInBackground(Void... params) {
+				String eventsData = Util.getJsonStringFromAssets(activity,
+						"event_details.json");
+				EventListObject elo = (new ReflectionParser<EventListObject>())
+						.getResponseObject(EventListObject.class, eventsData);
+				EventObject.getEventDBUtil(activity).callBatchInsertUpdates(
+						elo.eventsList);
+				return null;
+			}
+		}.execute();
 	}
 
 }
