@@ -1,0 +1,30 @@
+<resources>
+
+    <string name="app_name">EventTracker</string>
+    <string name="app_title">Event Tracker</string>
+
+    <!-- MainScreenActivity -->
+    <string name="hint_prompt_name">Enter your name</string>
+    <string name="button_continue">Continue</string>
+    <string name="error_empty_name">Please enter your name, and try again.</string>
+    <string name="welcome">Welcome </string>
+    <string name="to">to</string>
+    <string name="welcome_back">Welcome back</string>
+
+    <!-- EventsActivity -->
+    <string name="events_activity_title">Events</string>
+    <string name="no_events_found">You do not have nay tracked events, track now!</string>
+
+    <!-- EventsDetailActivity -->
+    <string name="location">Location :</string>
+    <string name="entry_type">Entry Type :</string>
+    <string name="track_event">Track Event</string>
+
+    <!-- Database Strings -->
+    <string name="DATABASE_VERSION">6</string>
+    <string name="DATABASE_NAME">etdb</string>
+
+    <!-- Action Bar -->
+    <string name="track_event_menu">Saved Events</string>
+
+</resources>
